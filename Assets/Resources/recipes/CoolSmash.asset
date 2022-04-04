@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c3c475e344f984295138be4a4013fe, type: 3}
+  m_Name: CoolSmash
+  m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: 11400000, guid: a9054c671eafeb54b9b77d0b2dd0f128, type: 2}
+  - {fileID: 11400000, guid: c908f2403f4221541af168cbb6c093de, type: 2}
+  - {fileID: 11400000, guid: 399dfaaee6376f248a6e11cc932dd64e, type: 2}
+  - {fileID: 11400000, guid: 399dfaaee6376f248a6e11cc932dd64e, type: 2}
+  - {fileID: 11400000, guid: 399dfaaee6376f248a6e11cc932dd64e, type: 2}
+  - {fileID: 11400000, guid: 399dfaaee6376f248a6e11cc932dd64e, type: 2}
+  - {fileID: 11400000, guid: 399dfaaee6376f248a6e11cc932dd64e, type: 2}
+  icon: {fileID: 21300000, guid: 97ec0ad36813c5647844140ec54703d9, type: 3}
+  reward: 14

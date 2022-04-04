@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c3c475e344f984295138be4a4013fe, type: 3}
+  m_Name: ABCJuice
+  m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: 11400000, guid: 478f5e65c7b16fd4ebbf24c5c828a1fc, type: 2}
+  - {fileID: 11400000, guid: 478f5e65c7b16fd4ebbf24c5c828a1fc, type: 2}
+  - {fileID: 11400000, guid: b6788f945a5f6fb45a8cd190b513a2a3, type: 2}
+  - {fileID: 11400000, guid: b6788f945a5f6fb45a8cd190b513a2a3, type: 2}
+  - {fileID: 11400000, guid: f7e18ca992bb3324a9b31fad943cb7f1, type: 2}
+  - {fileID: 11400000, guid: f7e18ca992bb3324a9b31fad943cb7f1, type: 2}
+  icon: {fileID: 21300000, guid: a90464811061e834b8976ddd603e9388, type: 3}
+  reward: 20

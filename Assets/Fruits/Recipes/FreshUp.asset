@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c3c475e344f984295138be4a4013fe, type: 3}
+  m_Name: FreshUp
+  m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: 11400000, guid: 5635266e1181b974b819b45646ebf40f, type: 2}
+  - {fileID: 11400000, guid: 5635266e1181b974b819b45646ebf40f, type: 2}
+  - {fileID: 11400000, guid: 5635266e1181b974b819b45646ebf40f, type: 2}
+  - {fileID: 11400000, guid: 3ad0f67626b5ae14bbca7f79b9e12325, type: 2}
+  - {fileID: 11400000, guid: 3ad0f67626b5ae14bbca7f79b9e12325, type: 2}
+  icon: {fileID: 21300000, guid: 5a91dc8715dafa64d9b4437df7a7a859, type: 3}
+  reward: 10
