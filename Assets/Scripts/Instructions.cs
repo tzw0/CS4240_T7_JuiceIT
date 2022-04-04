@@ -73,6 +73,8 @@ public class Instructions : MonoBehaviour
         if (currentIndex >= instructionList.Count - 1) {
             instructionList[currentIndex].SetActive(false);
             hideInstructions = true;
+            EyeTrack eyeTrack = FindObjectsOfType(typeof(EyeTrack))[0] as EyeTrack;
+            eyeTrack.Reset();
             return;
         }
         if (currentIndex >= 0) {

@@ -4029,6 +4029,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Good Luck and Juice IT!
       objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSize
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
 --- !u!224 &470407531 stripped
@@ -7599,8 +7607,16 @@ PrefabInstance:
     - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
       propertyPath: m_text
       value: This is the drink you have to make. There will be a score reward for
-        each drink completed. It is best to remember the recipe of each drink to
-        improve your memory score.
+        each drink completed and a star deduction for each uncompleted drink. It
+        is best to remember the recipe of each drink to improve your memory score.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSize
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
@@ -17913,7 +17929,16 @@ PrefabInstance:
       propertyPath: m_text
       value: Look down on the table to see the recipe to create the drink. Cut the
         ingredient if they are shown as a slice (half fruit). Otherwise, touch them
-        with your right hand.
+        with your right hand. The grey rectangles below each ingredient icon indicates
+        how many of such ingredients you need.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSize
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
@@ -18320,8 +18345,17 @@ PrefabInstance:
     - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
       propertyPath: m_text
       value: Also, you can use the trigger button of the right controller to pull
-        the fruit you are pointing at towards you. Grip button of the right controller
+        the fruit you are pointing at towards you (Do note that you still have to
+        reach to touch / cut the ingredient). Grip button of the right controller
         can be used to move ingredients around.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSize
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659918898736679204, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d9f7b778e615d4bb485442d09ac617, type: 3}

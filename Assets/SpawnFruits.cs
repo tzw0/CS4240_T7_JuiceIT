@@ -107,10 +107,9 @@ public class SpawnFruits : MonoBehaviour
                 recipeCompletionStatus.Add(recipeCounter, false);
             }
             
-            if ((recipeCounter % GameManager.Instance.recipePerLevel == 0 ||
-                recipeCounter == 1)) {
-                Level level = GameManager.Instance.GetLevel();
+            if ((recipeCounter - 1) % GameManager.Instance.recipePerLevel == 0) {
                 GameManager.Instance.NextLevel();
+                Level level = GameManager.Instance.GetLevel();
                 GameObject difficultyObj = Instantiate(difficultyPrefab, 
                     new Vector3(0, 1f, 7), Quaternion.identity);
                 Rigidbody rb = difficultyObj.GetComponent<Rigidbody>();

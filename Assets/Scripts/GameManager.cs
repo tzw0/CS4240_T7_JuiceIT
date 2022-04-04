@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     // public Recipe dummyRecipe;
     private ArrayList levelSettings;
     private int currentRecipeNumber = 0;
-    private int currentLevel = 0;
+    private int currentLevel = -1;
     public int recipePerLevel;
     public int maxWrongOrder;
     private int wrongOrders = 0;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     private MovementTrack[] hands;
 
     private bool gameStarted = false;
+    private bool atLastLevel = false;
 
     public static GameManager Instance
     {
@@ -283,6 +284,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void BeginGame() {
+        atLastLevel = false;
         gameStarted = true;
         combo = 0;
         UpdateComboUI(null);
@@ -300,7 +302,7 @@ public class GameManager : MonoBehaviour
         orderMachine.Flush();
         currentRecipeNumber = 0;
         currentRecipe = null;
-        currentLevel = 0;
+        currentLevel = -1;
         currentRecipeList.Clear();
         currentRecipeProgress = new SortedDictionary<string, int>();
         currentRecipeImages = new Dictionary<string, Sprite>();
@@ -347,17 +349,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel() {
-        string[] difficultyList = new string[] {"easy", "normal", "hard", "expert","insane"};
-        levelText.text = difficultyList[currentLevel];
-        AudioSource.PlayClipAtPoint(nextLevelSound, orderMachine.transform.position);
         if (currentLevel < levelSettings.Count - 1) {
             currentLevel++;
-        } else {
-            levelText.text = "";
         }
+
+        string[] difficultyList = new string[] {"easy", "normal", "hard", "expert","insane"};
+        levelText.text = difficultyList[currentLevel];
     }
 
     public string getDifficulty() {
+        if (atLastLevel) return "";
+        if (currentLevel == levelSettings.Count - 1) {
+            atLastLevel = true;
+        }
+        AudioSource.PlayClipAtPoint(nextLevelSound, orderMachine.transform.position);
         return levelText.text;
     }
 
