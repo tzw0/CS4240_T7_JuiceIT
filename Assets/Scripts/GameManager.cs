@@ -227,6 +227,7 @@ public class GameManager : MonoBehaviour
         RatingManager.Instance.Set();
 
         levelSettings = new ArrayList();
+        levelSettings.Add(new Level(new int[]{4}, 700, 30, 3f, 5));
         levelSettings.Add(new Level(new int[]{3}, 1000, 40, 1.3f, 3));
         levelSettings.Add(new Level(new int[]{2,2,3}, 2000, 40, 1f, 3));
         levelSettings.Add(new Level(new int[]{3,2}, 3000, 50, 0.8f, 3));
@@ -302,7 +303,7 @@ public class GameManager : MonoBehaviour
         orderMachine.Flush();
         currentRecipeNumber = 0;
         currentRecipe = null;
-        currentLevel = -1;
+        currentLevel = Instructions.Instance.isRunning() ? -1 : 0;
         currentRecipeList.Clear();
         currentRecipeProgress = new SortedDictionary<string, int>();
         currentRecipeImages = new Dictionary<string, Sprite>();
@@ -353,7 +354,7 @@ public class GameManager : MonoBehaviour
             currentLevel++;
         }
 
-        string[] difficultyList = new string[] {"easy", "normal", "hard", "expert","insane"};
+        string[] difficultyList = new string[] {"tutorial", "easy", "normal", "hard", "expert","insane"};
         levelText.text = difficultyList[currentLevel];
     }
 

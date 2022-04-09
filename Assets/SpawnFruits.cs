@@ -107,7 +107,19 @@ public class SpawnFruits : MonoBehaviour
                 recipeCompletionStatus.Add(recipeCounter, false);
             }
             
-            if ((recipeCounter - 1) % GameManager.Instance.recipePerLevel == 0) {
+            if ((recipeCounter - 1) % GameManager.Instance.recipePerLevel == 0 ||
+                Instructions.Instance.isRunning() &&
+                recipeCounter - (GameManager.Instance.maxWrongOrder - GameManager.Instance.GetWrongOrdersLeft())
+                > 5) {
+                
+                if (Instructions.Instance.isAtIndex(11)) {
+                    Instructions.Instance.JumpTo(12);
+    
+                    Debug.Log("Waiting for Instructions not running");
+
+                    yield return new WaitUntil(() => (!Instructions.Instance.isRunning()));
+                }
+                
                 GameManager.Instance.NextLevel();
                 Level level = GameManager.Instance.GetLevel();
                 GameObject difficultyObj = Instantiate(difficultyPrefab, 
@@ -133,7 +145,8 @@ public class SpawnFruits : MonoBehaviour
             StartCoroutine(DelaySetCurrentRecipe(recipe, timeFuitExists, recipeCounter));
             //recipeInterval is also the time player has from order received to first fruit.
             yield return new WaitForSeconds(recipeInterval);
-            yield return new WaitUntil(() => (!Instructions.Instance.isRunning()));
+            yield return new WaitUntil(() => (Instructions.Instance.isAtIndex(11) ||
+                !Instructions.Instance.isRunning()));
             List<Fruit> fruits = recipe.fruits;
             float recipeLength = fruits.Count;
             // Debug.Log("init correct fruits");
@@ -162,6 +175,8 @@ public class SpawnFruits : MonoBehaviour
             List<GameObject> fruitsToDestroy = new List<GameObject>();
             foreach (GameObject fruit in fruitsToSpawn)
             {
+                // yield return new WaitUntil(() => (UIManager.Instance.userResume()));
+
                 //only terminate the loop if the recipe completed is the current recipe
                 //(if it is the previous recipe that is completed during the loop, we should not break)
                 if (completedRecipeNumber == recipeCounter)
@@ -194,26 +209,6 @@ public class SpawnFruits : MonoBehaviour
             //Evaluate once the last fruit from fruitsToSpawn reach user.
             StartCoroutine(CheckRecipeCorrectness(recipeCounter, fruitsToDestroy));
             StartCoroutine(CheckRecipeWrongness(timeFuitExists, recipeCounter));
-
-            // if (!evalCompleted) {
-            //     Debug.Log("starting coroutines: " + recipeCounter);
-            //     //Evaluate once the last fruit from fruitsToSpawn reach user.
-            //     StartCoroutine(CheckRecipeCorrectness(recipeCounter));
-            //     StartCoroutine(CheckRecipeWrongness(timeFuitExists, recipeCounter));
-            // }
-
-            // loop baby
-            // if (repeat && recipeList.Count == 0)
-            // {
-            //     foreach (Recipe repeat in repeatList)
-            //     {
-            //         recipeList.Add(repeat);
-            //     }
-            // }
-
-
-            // need to account for amount of time fruits travel. 
-            // Only print order when fruit is almost approaching.
         }
     }
 

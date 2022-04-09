@@ -9,6 +9,7 @@ public class Instructions : MonoBehaviour
     public List<GameObject> instructionList;
     private int currentIndex = 0;
     private bool hideInstructions = true;
+    private List<int> lockedIndexes = new List<int>{3, 11};
     public static Instructions Instance
     {
         get
@@ -44,7 +45,7 @@ public class Instructions : MonoBehaviour
         if (!hideInstructions &&
                 (SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand) ||
                 SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand)) &&
-                currentIndex != 3) {
+                !lockedIndexes.Contains(currentIndex) ) {
                 Debug.Log("Instructions next");
                 Instructions.Instance.Next();
             }
@@ -53,7 +54,6 @@ public class Instructions : MonoBehaviour
     public void StartInstructions() {
         if (hideInstructions) {
             hideInstructions = false;
-            Next();
         }
     }
 
@@ -86,5 +86,10 @@ public class Instructions : MonoBehaviour
 
     public bool isRunning() {
         return !hideInstructions;
+    }
+
+    public bool isAtIndex(int i) {
+        // if is not running, it will return true
+        return currentIndex == i;
     }
 }

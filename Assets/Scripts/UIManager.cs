@@ -7,6 +7,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    private static UIManager _instance;
     public Text MassText;
     public Text HeightText;
     public TMP_Text MemoryText;
@@ -24,11 +25,32 @@ public class UIManager : MonoBehaviour
     private int lowerMass = 30;
     public GameObject startGame;
     public GameObject gameOver;
+    public GameObject pause;
     public GameObject crateWallPrefab;
     private GameObject crateWall = null;
     private Flicker flicker;
     private Flicker1 flicker1;
     // Start is called before the first frame update
+       public static UIManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
+     private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
     void Start()
     {
         GameManager.Instance.LoadGame();
@@ -39,10 +61,15 @@ public class UIManager : MonoBehaviour
         
         startGame.SetActive(true);
         gameOver.SetActive(false);
+        pause.SetActive(false);
         crateWall = Instantiate(crateWallPrefab, transform);
         crateWall.transform.localPosition = new Vector3(227, 479, 73);
         crateWall.transform.localScale = new Vector3(200,200,200);
         crateWall.transform.localRotation = Quaternion.Euler(0,90,0);
+    }
+
+    public bool userResume() {
+        return mode != 2;
     }
 
     void Update()
@@ -162,6 +189,41 @@ public class UIManager : MonoBehaviour
             flicker.enabled = true;
             flicker1.enabled = true;
             GameManager.Instance.InitialiseScoreCalorieCounter();
+        } else if (mode == 2) {
+            if (SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.LeftHand) ||
+                SteamVR_Input.GetStateDown("GrabPinch", SteamVR_Input_Sources.RightHand)) {
+                Debug.Log("Game Started");
+                flicker.enabled = false;
+                flicker1.enabled = false;
+                UI.SetActive(false);
+                foreach (Transform child in crateWall.transform) {
+                    child.GetComponent<Rigidbody>().useGravity = true;
+                    child.GetComponent<Rigidbody>().isKinematic = false;
+                    child.GetComponent<Rigidbody>().AddForce(
+                        new Vector3(Random.Range(-20,20),Random.Range(-20,20),Random.Range(-20,20)) * 20);
+                }
+
+                Destroy(crateWall, 3);
+                Instructions.Instance.JumpTo(4);
+                GameManager.Instance.BeginGame();
+            }
+
+            if (SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand) ||
+                SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand)) {
+                    Debug.Log("Continue Game");
+                    mode = 1;
+                    flicker.enabled = false;
+                    flicker1.enabled = false;
+                    UI.SetActive(false);
+                    foreach (Transform child in crateWall.transform) {
+                        child.GetComponent<Rigidbody>().useGravity = true;
+                        child.GetComponent<Rigidbody>().isKinematic = false;
+                        child.GetComponent<Rigidbody>().AddForce(
+                            new Vector3(Random.Range(-20,20),Random.Range(-20,20),Random.Range(-20,20)) * 20);
+                    }
+
+                    Destroy(crateWall, 3);
+                }
         }
     }
 }
