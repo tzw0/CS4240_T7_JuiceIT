@@ -1,6 +1,6 @@
 # CS4240_T7_JucieIT
 
-### Project Intro
+## Project Intro
 Juice It is the most action-packed Fruit Juice Joint in town!  
 
 Enhanced by the immersive power of VR, Juice It is a Unity game that 
@@ -57,7 +57,7 @@ players to "Exercise by Accident".
    1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
    2. Other packages can be downloaded from Unity Registry
 
-### Game Controls
+## Game Controls
 * Swing Left Hand to slice fruits
 * Touch fruits with Right Hand to grab fruits
 * Right Trigger to pull fruits toward the player
@@ -69,4 +69,53 @@ players to "Exercise by Accident".
   * Oculus: Right Thumbstick
   * HTC Vive: Right Trackpad
 
+## Gameplay
+The objective of the game is to complete as many recipes as quickly
+and as accurately as possible. 
+The in-game score represents the competency and proficiency of the player.
+Each recipe failed results in a loss of a star, from a starting of 5 stars.
+Aim for the highest score possible!
 
+### Game Mechanics
+#### Slice and Dice
+Slice up the fruits you need to complete the recipe
+
+#### Moving Fruits
+* 
+* Point at the fruit you wish to move
+* Hold the Right Grip button and move the fruit around
+* Release Right Grip at the location you wish to move the fruit
+
+#### Grabbing Fruits
+* 
+* Point at the fruit you wish to catch 
+* Hold the Right Trigger to suck the fruit towards you
+* Touch the fruit with your right hand to catch the fruit 
+* Alternatively, you can position your hand in the right place and wait for the fruit to touch your hand
+
+#### Scoring
+* Recipes: Complete recipes to increase score
+* Combos: consecutive correctly sliced/grabbed fruits rewards bonus points
+* Wrong Ingredients: Slicing/Grabbing wrong ingredients deducts points
+* Incomplete Recipe: Failed recipes result in the loss of a star
+* Memory: The game tracks the amount of time spent looking at the recipe
+* Calories: The game tracks the amount of calories lost during gameplay
+
+### Gameplay Guide
+1. Starting screen
+   1. input your height and weight
+2. Start game/tutorial
+   1. Press either Grip Buttons to start tutorial
+   2. Press either Trigger Buttons to start game
+3. Complete recipes on the table
+   1. Table shows the current recipe and number of fruits to be sliced or grabbed
+   2. Half ingredient icon shows fruits to be cut
+   3. Full ingredient icon shows fruits to be grabbed
+   4. The number of bars underneath each ingredient shows the number of each ingredient needed for the recipe
+4. Scoring
+   1. Each recipe completed adds to score
+   2. Each recipe failed results in the loss of a star
+5. Ending screen
+   1. After the loss of all 5 stars, the game over
+   2. End game screen shows the final score, memory time and calories burnt
+   3. Press either Trigger Buttons to restart the game
