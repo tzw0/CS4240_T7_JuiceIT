@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="APIReference">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Assets/KinematicCharacterController/APIReference.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
