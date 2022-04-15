@@ -9,7 +9,7 @@ running your own Fruit Juice Shop in the metaverse.
 
 ![alt text](Images/Poster_landscape.png)
 
-### What is the Game About?
+## What is the Game About?
 For some of us, exercise and fitness comes naturally. But the rest of
 us need some coaxing. This game was created for us to "Exercise by
 Accident", to help us get a workout at home. 
@@ -33,7 +33,7 @@ players to "Exercise by Accident".
 * [NUS 18th STEPs Page](https://uvents.nus.edu.sg/event/20th-steps/module/CS4240/project/7)
 * [Youtube Trailer](https://youtu.be/iJCVowHiigQ)
 
-### Setup
+## Setup
 
 #### Platforms
 * Oculus
