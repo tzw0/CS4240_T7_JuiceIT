@@ -78,22 +78,24 @@ Aim for the highest score possible!
 
 ### Game Mechanics
 #### Slice and Dice
-Slice up the fruits you need to complete the recipe
+![alt text](Images/slicing.gif)
+* Slice up the fruits you need to complete the recipe
 
 #### Moving Fruits
-* 
+![alt text](Images/moving.gif)
 * Point at the fruit you wish to move
 * Hold the Right Grip button and move the fruit around
 * Release Right Grip at the location you wish to move the fruit
 
 #### Grabbing Fruits
-* 
+![alt text](Images/sucking.gif)
 * Point at the fruit you wish to catch 
 * Hold the Right Trigger to suck the fruit towards you
 * Touch the fruit with your right hand to catch the fruit 
 * Alternatively, you can position your hand in the right place and wait for the fruit to touch your hand
 
 #### Scoring
+![alt text](Images/score.jpg)
 * Recipes: Complete recipes to increase score
 * Combos: consecutive correctly sliced/grabbed fruits rewards bonus points
 * Wrong Ingredients: Slicing/Grabbing wrong ingredients deducts points
