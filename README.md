@@ -51,11 +51,22 @@ players to "Exercise by Accident".
 * SteamVR
 
 #### Setup Process
+Setup with Repository:
 1. Clone repository onto local drive
 2. Open project in Unity 2020.2.1f1
 3. Download and import all Unity packages used
    1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
    2. Other packages can be downloaded from Unity Registry
+4. Main game scene is found under Assets/Scenes/mainscene
+
+Alternatively, setup with unity package:
+1. Download the latest unity package from Releases
+2. Open empty 3D project in Unity 2020.2.1f1
+3. Extract package into project
+4. Download and import all Unity packages used
+   1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
+   2. Other packages can be downloaded from Unity Registry
+5. Main game scene is found under Assets/Scenes/mainscene
 
 ## Game Controls
 * Swing Left Hand to slice fruits
