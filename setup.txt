@@ -27,7 +27,7 @@ Setup Process:
 7. Go to Window -> SteamVR Input
 8. Click Open binding UI
 9. In the new SteamVR window, edit controller binding
-10. Assign up down left right for directional pad
+10. Assign up down left right for directional pad(Oculus) / trackpad(Vive)
 11. Save Personal Binding
 5. Main game scene is found under Assets/Scenes/mainscene
 
