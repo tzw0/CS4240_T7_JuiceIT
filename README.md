@@ -57,7 +57,14 @@ Setup with Repository:
 3. Download and import all Unity packages used
    1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
    2. Other packages can be downloaded from Unity Registry
-4. Main game scene is found under Assets/Scenes/mainscene
+4. Assign Dpad
+   1. Sign in to Steam and download SteamVR (if not already done so)
+   2. Go to Window -> SteamVR Input
+   3. Click Open binding UI
+   4. In the new SteamVR window, edit controller binding
+   5. Assign up down left right for directional pad
+   6. Save Personal Binding
+5. Main game scene is found under Assets/Scenes/mainscene
 
 Alternatively, setup with unity package:
 1. Download the latest unity package from Releases
@@ -66,7 +73,14 @@ Alternatively, setup with unity package:
 4. Download and import all Unity packages used
    1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
    2. Other packages can be downloaded from Unity Registry
-5. Main game scene is found under Assets/Scenes/mainscene
+5. Assign Dpad
+    1. Sign in to Steam and download SteamVR (if not already done so)
+    2. Go to Window -> SteamVR Input
+    3. Click Open binding UI
+    4. In the new SteamVR window, edit controller binding
+    5. Assign up down left right for directional pad
+    6. Save Personal Binding
+6. Main game scene is found under Assets/Scenes/mainscene
 
 ## Game Controls
 * Swing Left Hand to slice fruits
