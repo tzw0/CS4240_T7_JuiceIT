@@ -57,12 +57,12 @@ Setup with Repository:
 3. Download and import all Unity packages used
    1. SteamVR can be downloaded [here](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)
    2. Other packages can be downloaded from Unity Registry
-4. Assign Dpad
+4. Assign Dpad/Trackpad
    1. Sign in to Steam and download SteamVR (if not already done so)
    2. Go to Window -> SteamVR Input
    3. Click Open binding UI
    4. In the new SteamVR window, edit controller binding
-   5. Assign up down left right for directional pad
+   5. Assign up down left right for directional pad(Oculus) / trackpad(Vive)
    6. Save Personal Binding
 5. Main game scene is found under Assets/Scenes/mainscene
 
