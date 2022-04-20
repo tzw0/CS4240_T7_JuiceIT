@@ -19,18 +19,22 @@ SteamVR
 
 
 Setup Process:
-1. Open project in Unity 2020.2.1f1
-2. Download and import all Unity packages used
-3. SteamVR can be downloaded here: https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
-4. Other packages can be downloaded from Unity Registry
-6. Sign in to Steam and download SteamVR (if not already done so)
-7. Go to Window -> SteamVR Input
-8. Click Open binding UI
-9. In the new SteamVR window, edit controller binding
-10. Assign up down left right for directional pad(Oculus) / trackpad(Vive)
-11. Save Personal Binding
-5. Main game scene is found under Assets/Scenes/mainscene
+1. Unzip and find the JuiceITv1.3 unity package
+2. Open empty 3D project in Unity 2020.2.1f1
+3. Extract package into project
+4. Download and import all Unity packages used
+   1. SteamVR can be downloaded here: https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
+   2. Other packages can be downloaded from Unity Registry
+5. Assign Dpad/Trackpad
+    1. Sign in to Steam and download SteamVR (if not already done so)
+    2. Go to Window -> SteamVR Input
+    3. Click Open binding UI
+    4. In the new SteamVR window, edit controller binding
+    5. Assign up down left right for directional pad(Oculus) / trackpad(Vive)
+    6. Save Personal Binding
+6. Main game scene is found under Assets/Scenes/mainscene
 
-For more information, read to README file or visit our Github repo: https://github.com/tzw0/CS4240_T7_JuiceIT
+For more information, read the README file or visit our Github repo: https://github.com/tzw0/CS4240_T7_JuiceIT
+Instructions for gameplay can be found in the README, or during the ingame tutorial
 
 
